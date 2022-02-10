@@ -1,0 +1,19 @@
+{
+  "name": "discussion",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImMPrada/discussion.git"
+  },
+  "author": "Miguel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImMPrada/discussion/issues"
+  },
+  "homepage": "https://github.com/ImMPrada/discussion#readme"
+}
