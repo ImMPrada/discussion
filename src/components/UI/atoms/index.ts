@@ -1,1 +1,1 @@
-export { default as LikesButton } from './LikesButton'
+export { default as LikesContainer } from './LikesContainer'

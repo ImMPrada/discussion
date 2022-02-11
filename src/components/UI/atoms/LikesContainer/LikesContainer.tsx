@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css'
 
 
-const LikesButton = () => {
+const LikesContainer = () => {
   const [value, setValue] = React.useState(0)
   const increaseValue = () => {
     let tempValue = value+1
@@ -28,4 +28,4 @@ const LikesButton = () => {
   )
 }
 
-export default LikesButton
+export default LikesContainer
