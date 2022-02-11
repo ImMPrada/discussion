@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { ProfileBox } from './components/UI/atoms'
+import { MessageHeader } from './components/UI/molecules'
 
 function App() {
   return (
-    <ProfileBox />
+    <MessageHeader />
   );
 }
 
