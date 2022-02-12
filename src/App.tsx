@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { LikesContainer } from './components/UI/atoms'
+import { Message } from './components/UI/molecules'
 
 function App() {
   return (
-    <LikesContainer />
+    <Message />
   );
 }
 
