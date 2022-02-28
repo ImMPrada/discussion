@@ -5,7 +5,7 @@
   align-content: center;
   align-items: center;
   height: 100px;
-  width: 40px;
+  width: auto;
   background-color: red;
   border-radius: 5px;
   border: 0;

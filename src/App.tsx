@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Message } from './components/UI/molecules'
+import { Post } from './components/UI/organisms'
 
 function App() {
   return (
-    <Message />
+    <Post />
   );
 }
 

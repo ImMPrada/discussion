@@ -1,0 +1,20 @@
+.post {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.post-likes-container {
+  width: 80px;
+  background-color: red;
+}
+
+.post-message {
+  width: 100%;
+  background-color: blue;
+}
