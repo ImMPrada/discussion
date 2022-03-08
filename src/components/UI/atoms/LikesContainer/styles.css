@@ -6,7 +6,7 @@
   align-items: center;
   height: 100px;
   width: auto;
-  background-color: red;
+  border: solid 1px black;
   border-radius: 5px;
   border: 0;
   padding: 0;

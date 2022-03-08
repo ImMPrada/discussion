@@ -10,11 +10,11 @@
 }
 
 .post-likes-container {
-  width: 80px;
-  background-color: red;
+
+  background-color: pink;
 }
 
 .post-message {
   width: 100%;
-  background-color: blue;
+  border: solid 1px black;
 }
