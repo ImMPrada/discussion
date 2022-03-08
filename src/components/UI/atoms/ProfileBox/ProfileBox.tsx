@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.css'
 import { AvatarGenerator } from 'random-avatar-generator';
+import { ProfileBoxProps } from './types'
 
 
 const profileData = {
@@ -9,7 +10,10 @@ const profileData = {
   userAvatar: new AvatarGenerator().generateRandomAvatar(),
 }
 
-const ProfileBox = () => {
+const ProfileBox = ({
+  onlyAvatar,
+  isYou
+}: ProfileBoxProps) => {
   console.log(profileData)
 
 
@@ -18,9 +22,16 @@ const ProfileBox = () => {
       <div className="profilebox-avatar">
         <img src={profileData.userAvatar} />
       </div>
-      <div className="profilebox-nickname">
-        <h3>{profileData.userNick}</h3>
-      </div>
+      { !onlyAvatar && (
+        <div className="profilebox-nickname">
+          <h3>{profileData.userNick}</h3>
+        </div>
+      )}
+      { isYou && (
+        <div className="profilebox-nickname">
+          <h3>YOU</h3>
+        </div>
+      )}
     </div>
   )
 }
