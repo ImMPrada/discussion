@@ -7,7 +7,10 @@ const MessageHeader = () => {
   return(
     <div className="message-header">
       <div className="message-header-message-info">
-        <ProfileBox />
+        <ProfileBox 
+          onlyAvatar = {false}
+          isYou = {true}
+        />
         <ATimeAgoLabel label="lorem ipsum"/>
       </div>
       <div className="message-header-message-actions">

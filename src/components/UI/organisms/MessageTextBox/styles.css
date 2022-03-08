@@ -1,0 +1,38 @@
+.message-textbox {
+  display: flex;
+  flex-direction: row;
+
+  height: 144px;
+  width: 100%;
+  
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.message-textbox * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.message-textbox-text {
+  width: 100%;
+}
+
+.message-textbox-profile-avatar {
+
+  width: 80px;
+  background-color: pink;
+}
+
+.message-textbox-profile-avatar img {
+
+  height: 80px;
+}
+
+.message-textbox-button {
+
+  width: 144px;
+  background-color: red;
+}
