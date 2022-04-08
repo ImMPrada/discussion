@@ -1,4 +1,5 @@
+import { ProfileData } from '../../../../types'
 export interface ProfileBoxProps {
-    onlyAvatar: boolean;
     isYou: boolean;
+    profileData: ProfileData;
 }
