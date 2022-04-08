@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProfileBox, ATimeAgoLabel } from '../../atoms';
-import './styles.css'
+import './styles.scss'
 
 const MessageHeader = () => {
 

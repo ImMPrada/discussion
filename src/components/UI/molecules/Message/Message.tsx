@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageBody } from '../../atoms';
 import { MessageHeader } from '../'
-import './styles.css'
+import './styles.scss'
 
 const Message = () => {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ATimeAgoLabelTypes } from './types'
-import './styles.css'
+import './styles.scss'
 
 
 const ATimeAgoLabel = ({label}: ATimeAgoLabelTypes) => (
