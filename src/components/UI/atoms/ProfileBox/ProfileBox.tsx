@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css'
+import './styles.scss'
 import { AvatarGenerator } from 'random-avatar-generator';
 import { ProfileBoxProps } from './types'
 
