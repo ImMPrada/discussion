@@ -1,19 +1,14 @@
-import React from 'react';
+import { profileData } from '../../../../mocks'
 
 import './styles.scss'
-import { ProfileBox } from '../../atoms';
-import { TextArea } from '../../atoms'
-import { Button } from '../../atoms'
+import { TextArea, Avatar, Button } from '../../atoms'
 
 const MessageTextBox = () => {
 
   return(
     <div className="message-textbox">
       <div className="message-textbox-profile-avatar">
-        <ProfileBox 
-          onlyAvatar = {true}
-          isYou = {false}
-        />
+        <Avatar profileImg={profileData.userAvatar}/>
       </div>
       <div className="message-textbox-text">
         <TextArea 

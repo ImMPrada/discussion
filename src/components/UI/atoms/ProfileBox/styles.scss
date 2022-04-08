@@ -1,37 +1,30 @@
-.profilebox {
+@import '../../../../styles/global/index.scss';
+
+.profile-box {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   align-content: center;
-  background-color: yellow;
-  height: 100%;
+  gap: 16px;
 
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+  &-avatar {
+    width: 42px;
+  }
 
-.profilebox-avatar, .profilebox-nickname {
-  height: 100%;
-  display: flex;
-  align-items: center;
+  &-username {
+    font-weight: 500;
+    font-family: $font-rubik;
+    font-size: 16px;
+    color: $dark-blue;
 
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.profilebox-avatar img{
-  height: 100%;
-}
-
-.profilebox-nickname h3 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18.96px;
-
-  margin: 0;
-  padding: 0;
-  border: 0;
+    &-you {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 1px 6px 3px;
+      font-size: 13px;
+      color: $white;
+      background-color: $moderate-blue;
+      border-radius: 2px;
+      vertical-align: middle;
+    }
+  }
 }
