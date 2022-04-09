@@ -1,4 +1,3 @@
-import { AvatarGenerator } from "random-avatar-generator"
 import { Post } from '../types'
 
 export const posts: Post[] = [
@@ -8,6 +7,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: 'Alguna vez se me ocurrió empezar a programar, empecé con VBA excel y AutoCAD. Lueguito lueguito llegó el desarrollo web... y después los videojuegos?',
     responseTo: null,
+    main: true,
   },
   {
     postId: 2,
@@ -15,6 +15,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: 'Por qué será que hay tantos canes en la manada ahora! NOOOOOOO!',
     responseTo: null,
+    main: true,
   },
   {
     postId: 3,
@@ -22,6 +23,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: 'Yo fui el primero que llegó a molestarte guf guf!',
     responseTo: 2,
+    main: true,
   },
   {
     postId: 4,
@@ -29,6 +31,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: 'Gah! Gah! aaaaaaa gah!',
     responseTo: 2,
+    main: null,
   },
   {
     postId: 5,
@@ -36,6 +39,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: 'uuuuuuuuuuujh! ih ih grrrr!',
     responseTo: 3,
+    main: true,
   },
   {
     postId: 6,
@@ -43,6 +47,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: 'Y recuerdas R y Geotube?!',
     responseTo: 1,
+    main: null,
   },
   {
     postId: 7,
@@ -50,6 +55,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: '@mapra99 @immprada no les gusta 7ma puerta?',
     responseTo: null,
+    main: true,
   },
   {
     postId: 8,
@@ -57,6 +63,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: '...',
     responseTo: 7,
+    main: null,
   },
   {
     postId: 9,
@@ -64,6 +71,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: '...',
     responseTo: 7,
+    main: null,
   },
   {
     postId: 10,
@@ -71,13 +79,15 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: 'Aish! Por qué no te gusta?!!',
     responseTo: 8,
+    main: true,
   },
   {
     postId: 11,
     userId: 1,
     date: new Date().toString(),
     content: 'es malo!! Mira que a @mapra99 tampoco le gusta',
-    responseTo: 8,
+    responseTo: 10,
+    main: null,
   },
   {
     postId: 12,
@@ -85,6 +95,7 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: ':(',
     responseTo: 8,
+    main: null,
   },
   {
     postId: 13,
@@ -92,5 +103,6 @@ export const posts: Post[] = [
     date: new Date().toString(),
     content: 'Yo me como los moquitos',
     responseTo: null,
+    main: null,
   },
 ]

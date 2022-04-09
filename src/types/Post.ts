@@ -4,4 +4,5 @@ export interface Post {
   date: string;
   content: string;
   responseTo: number | null;
+  main: boolean | null;
 }
