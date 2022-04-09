@@ -1,23 +1,25 @@
 import { ProfileBox, TimeLabel } from '../../atoms';
 import { PostActions } from '../'
-import { profileData } from '../../../../mocks'
 import './styles.scss'
-import { Post } from '../../organisms';
+import { MessageHeaderProps } from './types';
 
-const MessageHeader = () => {
+const MessageHeader = ({
+  isYou,
+  profileData,
+}: MessageHeaderProps) => {
 
   return(
     <div className="message-header">
       <div className="message-header-info">
         <ProfileBox 
-          isYou
+          isYou={isYou}
           profileData={profileData}
         />
         <TimeLabel label="2 months ago"/>
       </div>
       <div className="message-header-message-actions">
         <PostActions
-          isYou
+          isYou={isYou}
         />
       </div>
     </div>

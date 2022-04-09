@@ -1,8 +1,11 @@
 import { LikesContainer } from '../../atoms'
 import { Message } from '../../molecules';
 import './styles.scss'
+import { PostProps } from './types'
 
-const Post = () => {
+const Post = ({
+  postData,
+}: PostProps) => {
 
   return(
     <div className="post">
@@ -10,7 +13,10 @@ const Post = () => {
         <LikesContainer />
       </div>
       <div className="post-message">
-        <Message />
+        <Message 
+          profileId={postData.userId}
+          content={postData.content}
+        />
       </div>
     </div>
   )

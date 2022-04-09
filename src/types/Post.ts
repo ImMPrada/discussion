@@ -3,6 +3,6 @@ export interface Post {
   userId: number;
   date: string;
   content: string;
-  responseTo: number | null;
   main: boolean | null;
+  responses?: any;
 }
