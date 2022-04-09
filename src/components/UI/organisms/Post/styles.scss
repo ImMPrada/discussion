@@ -1,7 +1,9 @@
 .post {
   display: flex;
   min-height: 148px;
-  border: solid 1px black;
+  background-color: white;
+  border-radius: 8px;
+  // border: solid 1px black;
 
   &-likes {
   

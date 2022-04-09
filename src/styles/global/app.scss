@@ -1,9 +1,15 @@
 @import './';
+body {
+  background-color: $very-ligth-gray;
+}
 
 .publications-container{
   height:100vh;
-  // position: relative;
-  padding: 0 15%;
+  width: 100%;
+  max-width: 980px;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
   background-color: $very-ligth-gray;
 
   &-wall {
@@ -12,8 +18,7 @@
   }
   
   &-message-box {
-    // position: absolute;
+
     height: 15vh;
-    // bottom: 0;
   }
 }
