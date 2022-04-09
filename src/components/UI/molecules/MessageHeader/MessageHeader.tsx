@@ -1,6 +1,8 @@
 import { ProfileBox, TimeLabel } from '../../atoms';
+import { PostActions } from '../'
 import { profileData } from '../../../../mocks'
 import './styles.scss'
+import { Post } from '../../organisms';
 
 const MessageHeader = () => {
 
@@ -14,7 +16,9 @@ const MessageHeader = () => {
         <TimeLabel label="2 months ago"/>
       </div>
       <div className="message-header-message-actions">
-        <h2>Holi</h2>
+        <PostActions
+          isYou
+        />
       </div>
     </div>
   )

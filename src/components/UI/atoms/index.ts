@@ -5,3 +5,4 @@ export { default as MessageBody } from './MessageBody';
 export { default as TextArea } from './TextArea'
 export { default as Button } from './Button'
 export { default as Avatar } from './Avatar'
+export { default as ActionButton } from './ActionButton'

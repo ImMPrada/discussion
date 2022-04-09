@@ -1,0 +1,63 @@
+@import '../../../../styles/global/index.scss';
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-family: $font-rubik;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: color 0.2s;
+
+  svg {
+    path {
+      transition: fill 0.2s;
+    }
+  }
+
+  &.primary {
+    color: $moderate-blue;
+
+    svg {
+      path {
+        fill: $moderate-blue;
+      }
+    }
+
+    &:hover {
+      color: $light-grayish-blue;
+
+      svg {
+        path {
+          fill: $light-grayish-blue;
+        }
+      }
+    }
+  }
+
+  &.danger {
+    color: $soft-red;
+
+    svg {
+      path {
+        fill: $soft-red;
+      }
+    }
+
+    &:hover {
+      color: $pale-red;
+
+      svg {
+        path {
+          fill: $pale-red;
+        }
+      }
+    }
+  }
+}
