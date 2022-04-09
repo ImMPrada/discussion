@@ -39,6 +39,16 @@
         }
       }
     }
+
+    &:active {
+      color: $moderate-blue;
+
+      svg {
+        path {
+          fill: $moderate-blue;
+        }
+      }
+    }
   }
 
   &.danger {
@@ -56,6 +66,16 @@
       svg {
         path {
           fill: $pale-red;
+        }
+      }
+    }
+
+    &:active {
+      color: $soft-red;
+
+      svg {
+        path {
+          fill: $soft-red;
         }
       }
     }

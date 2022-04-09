@@ -12,8 +12,10 @@ const MessageTextBox = () => {
       <div className="message-textbox-avatar">
         <Avatar profileImg={currentUser.userAvatar} />
       </div>
-      <textarea>Holi</textarea>        
-      <button>Send</button>
+      <div className="message-textbox-text-area">
+        <textarea placeholder='Add a new post...'></textarea>        
+      </div>
+      <button>SEND</button>
     </div>
   )
 }
