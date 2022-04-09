@@ -1,0 +1,19 @@
+@import './';
+
+.publications-container{
+  height:100vh;
+  position: relative;
+  padding: 0 25%;
+  background-color: $very-ligth-gray;
+
+  &-wall {
+    height: 85vh;
+    overflow-y: scroll;
+  }
+  
+  &-message-box {
+    position: absolute;
+    height: 15vh;
+    bottom: 0;
+  }
+}
