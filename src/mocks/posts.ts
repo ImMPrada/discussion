@@ -65,4 +65,32 @@ export const posts: Post[] = [
     content: '...',
     responseTo: 7,
   },
+  {
+    postId: 10,
+    userId: 3,
+    date: new Date().toString(),
+    content: 'Aish! Por qué no te gusta?!!',
+    responseTo: 8,
+  },
+  {
+    postId: 11,
+    userId: 1,
+    date: new Date().toString(),
+    content: 'es malo!! Mira que a @mapra99 tampoco le gusta',
+    responseTo: 8,
+  },
+  {
+    postId: 12,
+    userId: 3,
+    date: new Date().toString(),
+    content: ':(',
+    responseTo: 8,
+  },
+  {
+    postId: 13,
+    userId: 2,
+    date: new Date().toString(),
+    content: 'Yo me como los moquitos',
+    responseTo: null,
+  },
 ]
