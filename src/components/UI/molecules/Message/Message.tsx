@@ -1,10 +1,12 @@
-import React from 'react';
+import { useContext } from 'react'
+import { DataContext } from '../../../../contexts/DataContext';
+import { AuthContext } from '../../../../contexts/AuthContext';
 import { MessageBody } from '../../atoms';
 import { MessageHeader } from '../'
 import { MessageProps } from './types'
 import './styles.scss'
-import { profiles } from '../../../../mocks'
-import { currentUser } from '../../../../mocks';
+
+
 
 const Message = ({
   profileId,
@@ -12,9 +14,12 @@ const Message = ({
 }: MessageProps) => {
 
   console.log(profileId)
+  const { currentUser }: any = useContext(AuthContext);
+  const { profiles }: any = useContext(DataContext);
   const getProfileData = (id: Number) => {
-    return profiles.filter(profile => profile.userId === id).slice(-1)[0]
+    return profiles.filter((profile: any) => profile.userId === id).slice(-1)[0]
   }
+  console.log(getProfileData(profileId))
 
   return(
     <div className="message">

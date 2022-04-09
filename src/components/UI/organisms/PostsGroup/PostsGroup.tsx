@@ -3,7 +3,6 @@ import './styles.scss'
 import { PostsGroupProps } from './types'
 
 const PostsGroup = ({
-  key,
   main,
   responses
 }: PostsGroupProps) => {
@@ -12,6 +11,7 @@ const PostsGroup = ({
     <div className="posts-group">
       <div className="posts-group-main">
         <Post 
+          key={main.postId}
           postData={main}
         />
       </div>
@@ -26,6 +26,7 @@ const PostsGroup = ({
                 {
                   return (
                     <Post 
+                      key={response.postId}
                       postData={response}
                     />
                   )

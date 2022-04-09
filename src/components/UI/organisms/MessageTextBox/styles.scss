@@ -1,29 +1,26 @@
 .message-textbox {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 
-  height: 100%;
+
   width: 100%;
+  height: 80%;
+
+  padding: 10px 10px;
   
-}
+  &-avatar {
+    align-self: center;
+    width: 20%;
+    max-width: 80px;
+  }
 
-.message-textbox-text {
-  width: 100%;
-}
-
-.message-textbox-profile-avatar {
-
-  width: 80px;
-  background-color: pink;
-}
-
-.message-textbox-profile-avatar img {
-
-  height: 80px;
-}
-
-.message-textbox-button {
-
-  width: 144px;
-  background-color: red;
+  textarea {
+    resize: none;
+    width: 100%;
+    background-color: red;
+  }
+  button{
+    align-self: center;
+    width: 20%;
+  }
 }

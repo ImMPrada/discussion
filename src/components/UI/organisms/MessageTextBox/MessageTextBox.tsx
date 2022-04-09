@@ -1,25 +1,19 @@
-import { profileData } from '../../../../mocks'
-
+import { useContext } from 'react'
+import { AuthContext } from '../../../../contexts/AuthContext'
 import './styles.scss'
-import { TextArea, Avatar, Button } from '../../atoms'
+import { Avatar } from '../../atoms'
 
 const MessageTextBox = () => {
+  const { currentUser }: any = useContext(AuthContext);
+
 
   return(
     <div className="message-textbox">
-      <div className="message-textbox-profile-avatar">
-        <Avatar profileImg={profileData.userAvatar}/>
+      <div className="message-textbox-avatar">
+        <Avatar profileImg={currentUser.userAvatar} />
       </div>
-      <div className="message-textbox-text">
-        <TextArea 
-          initialValue = ' Add a comment...'
-        />
-      </div>
-      <div className="message-textbox-button">
-        <Button 
-          label = 'Send'
-        />
-      </div>
+      <textarea>Holi</textarea>        
+      <button>Send</button>
     </div>
   )
 }

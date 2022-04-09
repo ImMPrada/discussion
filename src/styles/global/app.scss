@@ -2,8 +2,8 @@
 
 .publications-container{
   height:100vh;
-  position: relative;
-  padding: 0 25%;
+  // position: relative;
+  padding: 0 15%;
   background-color: $very-ligth-gray;
 
   &-wall {
@@ -12,8 +12,8 @@
   }
   
   &-message-box {
-    position: absolute;
+    // position: absolute;
     height: 15vh;
-    bottom: 0;
+    // bottom: 0;
   }
 }
