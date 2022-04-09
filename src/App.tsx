@@ -1,12 +1,12 @@
 import React from 'react';
-import { PostsGroup } from './components/UI/organisms'
+import { PostsGroup, Wall } from './components/UI/organisms'
 import { MessageTextBox } from './components/UI/organisms';
 
 
 function App() {
   return (
     <>
-      <PostsGroup />
+      <Wall/>
       <MessageTextBox />
     </>
   );

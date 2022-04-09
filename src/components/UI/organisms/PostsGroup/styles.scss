@@ -3,7 +3,7 @@
 .posts-group {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   border: solid 1px blue;
   
   &-responses {
@@ -17,7 +17,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 300px;
+      width: 88px;
       background-color: none;
 
       .icon {
@@ -30,8 +30,9 @@
     &-content {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 20px;
       border: solid 1px green;
+      width: 100%;
     }
   }
 }
