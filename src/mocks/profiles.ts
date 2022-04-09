@@ -1,5 +1,5 @@
 import { AvatarGenerator } from "random-avatar-generator"
-import { currentUser }  from './'
+import { currentUser }  from './currentUser'
 import { ProfileData } from '../types'
 
 export const profiles: ProfileData[] = [
@@ -29,8 +29,8 @@ export const profiles: ProfileData[] = [
     userAvatar: new AvatarGenerator().generateRandomAvatar(),
   },
   {
-    userId: 6,
-    username: 'yeiko',
+    userId: 7,
+    username: 'topper',
     userAvatar: new AvatarGenerator().generateRandomAvatar(),
   },
   {...currentUser},

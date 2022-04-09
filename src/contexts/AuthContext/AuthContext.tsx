@@ -1,10 +1,8 @@
 import { createContext } from 'react'
 import { currentUser } from '../../mocks';
-import { ProfileData } from '../../types'
+import { AuthContextTypes } from '../../types'
 
-interface AuthContextTypes {
-  currentUser: ProfileData,
-}
+
 
 export const AuthContext = createContext<AuthContextTypes | null>(null);
 

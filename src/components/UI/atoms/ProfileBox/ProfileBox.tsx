@@ -5,7 +5,9 @@ import { ProfileBoxProps } from './types'
 const ProfileBox = ({
   isYou,
   profileData
-}: ProfileBoxProps) => (
+}: ProfileBoxProps) => { 
+  console.log(profileData)
+  return(
   <div className="profile-box">
 
     <div className="profile-box-avatar">
@@ -22,6 +24,6 @@ const ProfileBox = ({
       )}
     </h3>
   </div>
-)
+)}
 
 export default ProfileBox

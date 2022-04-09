@@ -6,7 +6,7 @@ import { PostProps } from './types'
 const Post = ({
   postData,
 }: PostProps) => {
-
+  console.log(postData.userId)
   return(
     <div className="post">
       <div className="post-likes">
