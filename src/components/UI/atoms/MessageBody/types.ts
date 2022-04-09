@@ -1,3 +1,3 @@
-export interface MessageBodyTypes {
+export interface MessageBodyProps {
   message: string;
 }
