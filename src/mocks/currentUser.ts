@@ -1,5 +1,8 @@
-import { CurrentUser } from '../types'
+import { AvatarGenerator } from "random-avatar-generator"
+import { ProfileData } from '../types'
 
-export const currentUser: CurrentUser = {
+export const currentUser: ProfileData = {
   userId: 6,
+  username: 'yeiko',
+  userAvatar: new AvatarGenerator().generateRandomAvatar(),
 }
