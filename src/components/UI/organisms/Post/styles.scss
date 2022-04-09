@@ -1,0 +1,16 @@
+.post {
+  display: flex;
+  min-height: 148px;
+  border: solid 1px black;
+
+  &-likes {
+  
+    margin: 24px;
+  }
+
+  &-message {
+
+    margin: 24px 24px 24px 0;
+  }
+}
+

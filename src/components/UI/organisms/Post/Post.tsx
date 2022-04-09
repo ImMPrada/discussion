@@ -1,13 +1,12 @@
-import React from 'react';
 import { LikesContainer } from '../../atoms'
 import { Message } from '../../molecules';
-import './styles.css'
+import './styles.scss'
 
 const Post = () => {
 
   return(
     <div className="post">
-      <div className="post-likes-container">
+      <div className="post-likes">
         <LikesContainer />
       </div>
       <div className="post-message">
