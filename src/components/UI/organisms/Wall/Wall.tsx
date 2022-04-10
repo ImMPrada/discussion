@@ -6,12 +6,12 @@ import { Post } from '../../../../types'
 
 
 const Wall = () => {
-  const { posts }: any = useContext(DataContext);
-
+  const { allPosts }: any = useContext(DataContext);
+  console.log('Renderizando wall...')
   return(
     <div className="wall">
       {
-        posts.map((post: Post) => {
+        allPosts.map((post: Post) => {
           console.log(post)
           if(post.main) {
             return (

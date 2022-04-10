@@ -1,19 +1,22 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 import { posts, profiles } from '../../mocks';
 import { Post, ProfileData } from '../../types'
 
 interface DataContextTypes {
-  posts: Post[],
+  allPosts: Post[] | null,
+  setAllPosts: React.Dispatch<React.SetStateAction<Post[] | null>>,
   profiles: ProfileData[],
 }
 
 export const DataContext = createContext<DataContextTypes | null>(null);
 
 export const DataProvider = ({ children }: any) => {
+  const [allPosts, setAllPosts] = useState<Post[] | null>(posts)
 
 
   const contextVal = {
-    posts,
+    allPosts,
+    setAllPosts,
     profiles,
   }
 
