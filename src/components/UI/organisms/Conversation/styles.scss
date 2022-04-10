@@ -1,11 +1,11 @@
 @import '../../../../styles/global/index.scss';
 
-.posts-group {
+.conversation {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   
-  &-responses {
+  &-thread {
     
     display: flex;
     background-color: $very-ligth-gray;
