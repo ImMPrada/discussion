@@ -1,5 +1,5 @@
 import { 
-  Wall,
+  ConversationsList,
   MessageTextBox,
  } from '../../organisms'
 import './styles.scss'
@@ -7,11 +7,11 @@ import './styles.scss'
 
 const PostsSection = () => {
   return (
-    <div className='publications-container'>
-      <div className='publications-container-wall'>
-        <Wall/>
+    <div className='feed'>
+      <div className='feed-wall'>
+        <ConversationsList/>
       </div>
-      <div className='publications-container-message-box'>
+      <div className='feed-message-box'>
         <MessageTextBox/>
       </div>
     </div>

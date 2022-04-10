@@ -1,15 +1,15 @@
-import { Post } from '../'
+import { Post } from '..'
 import './styles.scss'
-import { PostsGroupProps } from './types'
+import { ConversationProps } from './types'
 
-const PostsGroup = ({
+const Conversation = ({
   main,
   responses
-}: PostsGroupProps) => {
+}: ConversationProps) => {
 
   return(
-    <div className="posts-group">
-      <div className="posts-group-main">
+    <div className="conversation">
+      <div className="conversation-initial-post">
         <Post 
           key={main.postId}
           postData={main}
@@ -17,11 +17,11 @@ const PostsGroup = ({
       </div>
         {
           responses.length > 0 && (
-            <div className="posts-group-responses">
-              <div className="posts-group-responses-icon">
+            <div className="conversation-thread">
+              <div className="conversation-thread-icon">
                 <div className="icon"></div>
               </div>
-              <div className="posts-group-responses-content">
+              <div className="conversation-thread-content">
                 {responses.map(response => 
                   {
                     return (
@@ -40,4 +40,4 @@ const PostsGroup = ({
   )
 }
 
-export default PostsGroup;
+export default Conversation;
