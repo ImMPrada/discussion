@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import './styles.scss'
-import { PostsGroup } from '..'
+import { Conversation } from '..'
 import { DataContext } from '../../../../contexts/DataContext'
 import { Post } from '../../../../types'
 
@@ -15,7 +15,7 @@ const ConversationsList = () => {
           console.log(post)
           if(post.main) {
             return (
-              <PostsGroup
+              <Conversation
                 key={post.postId}
                 main={post}
                 responses={post.responses}

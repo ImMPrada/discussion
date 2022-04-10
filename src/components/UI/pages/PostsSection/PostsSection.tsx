@@ -1,5 +1,5 @@
 import { 
-  Wall,
+  ConversationsList,
   MessageTextBox,
  } from '../../organisms'
 import './styles.scss'
@@ -9,7 +9,7 @@ const PostsSection = () => {
   return (
     <div className='feed'>
       <div className='feed-wall'>
-        <Wall/>
+        <ConversationsList/>
       </div>
       <div className='feed-message-box'>
         <MessageTextBox/>
