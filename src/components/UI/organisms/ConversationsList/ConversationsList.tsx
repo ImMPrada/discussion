@@ -1,15 +1,15 @@
 import { useContext } from 'react'
 import './styles.scss'
-import { PostsGroup } from '../'
+import { PostsGroup } from '..'
 import { DataContext } from '../../../../contexts/DataContext'
 import { Post } from '../../../../types'
 
 
-const Wall = () => {
+const ConversationsList = () => {
   const { allPosts }: any = useContext(DataContext);
   console.log('Renderizando wall...')
   return(
-    <div className="wall">
+    <div className="conversations-list">
       {
         allPosts.map((post: Post) => {
           console.log(post)
@@ -28,4 +28,4 @@ const Wall = () => {
   )
 }
 
-export default Wall;
+export default ConversationsList;
