@@ -5,17 +5,20 @@ import { MessageHeaderProps } from './types';
 
 const MessageHeader = ({
   isYou,
-  profileData,
+  user,
+  createdAt
 }: MessageHeaderProps) => {
+
+  const formattedTimeAgo = "2 months ago" // TODO: Use createdAt here
 
   return(
     <div className="message-header">
       <div className="message-header-info">
         <ProfileBox 
           isYou={isYou}
-          profileData={profileData}
+          user={user}
         />
-        <TimeLabel label="2 months ago"/>
+        <TimeLabel label={formattedTimeAgo}/>
       </div>
       <div className="message-header-message-actions">
         <PostActions

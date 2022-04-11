@@ -4,18 +4,16 @@ import { ProfileBoxProps } from './types'
 
 const ProfileBox = ({
   isYou,
-  profileData
-}: ProfileBoxProps) => { 
-  console.log(profileData)
-  return(
+  user
+}: ProfileBoxProps) => (
   <div className="profile-box">
 
     <div className="profile-box-avatar">
-      <Avatar profileImg={profileData.userAvatar} />
+      <Avatar profileImg={user.avatar} />
     </div>
 
     <h3 className="profile-box-username">
-      {profileData.username}
+      {user.nickname}
 
       { isYou && (
         <span className="profile-box-username-you">
@@ -24,6 +22,6 @@ const ProfileBox = ({
       )}
     </h3>
   </div>
-)}
+)
 
 export default ProfileBox

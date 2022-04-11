@@ -1,4 +1,4 @@
+import { Post } from '../../../../types';
 export interface ConversationProps {
-  main: any;
-  responses: any[];
+  post: Post;
 }

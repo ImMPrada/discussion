@@ -1,3 +1,5 @@
+import { Post } from '../../../../types'
+
 export interface PostProps {
-  postData: any;
+  post: Post;
 }

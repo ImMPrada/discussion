@@ -4,18 +4,20 @@ import './styles.scss'
 import { PostProps } from './types'
 
 const Post = ({
-  postData,
+  post,
 }: PostProps) => {
-  console.log(postData.userId)
+  const { reactionsScore, user, userId, content, createdAt } = post
   return(
     <div className="post">
       <div className="post-likes">
-        <LikesContainer />
+        <LikesContainer reactionsScore={reactionsScore} />
       </div>
       <div className="post-message">
         <Message 
-          profileId={postData.userId}
-          content={postData.content}
+          user={user}
+          userId={userId}
+          content={content}
+          createdAt={createdAt}
         />
       </div>
     </div>

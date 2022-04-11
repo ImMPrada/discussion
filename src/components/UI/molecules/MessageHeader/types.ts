@@ -1,4 +1,7 @@
+import { PostUser } from '../../../../types';
+
 export interface MessageHeaderProps {
   isYou: boolean;
-  profileData: any;
+  user: PostUser;
+  createdAt: string;
 }

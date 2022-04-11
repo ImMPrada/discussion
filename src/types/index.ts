@@ -1,4 +1,2 @@
-export * from './ProfileData'
+export * from './User'
 export * from './Post'
-export * from './CurrentUser'
-export * from './AuthContextTypes'
