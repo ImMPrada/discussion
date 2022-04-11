@@ -1,5 +1,5 @@
-import { ProfileData } from '../../../../types'
+import { PostUser } from '../../../../types'
 export interface ProfileBoxProps {
     isYou: boolean;
-    profileData: ProfileData;
+    user: PostUser;
 }

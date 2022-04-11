@@ -1,3 +1,6 @@
+import { useContext, useEffect } from 'react'
+import { PostsContext } from '../../../../contexts/PostsContext'
+import { PostsContextTypes } from '../../../../contexts/PostsContext/types'
 import { 
   ConversationsList,
   MessageTextBox,
@@ -6,6 +9,12 @@ import './styles.scss'
 
 
 const PostsSection = () => {
+  const { getPosts } = useContext(PostsContext) as PostsContextTypes;
+
+  useEffect(() => {
+    getPosts();
+  }, [])
+
   return (
     <div className='feed'>
       <div className='feed-wall'>

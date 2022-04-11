@@ -1,16 +1,17 @@
-import React from 'react';
+import { useState } from 'react';
 import { PlusIcon, MinusIcon } from '../../../icons';
 import './styles.scss'
 
+import { LikesContainerProps } from './types';
 
-const LikesContainer = () => {
-  const [value, setValue] = React.useState(0)
+const LikesContainer = ({ reactionsScore }: LikesContainerProps) => {
+  const [value, setValue] = useState(reactionsScore)
 
   const increaseValue = () => {
     setValue(value + 1)
   }
   const decreaseValue = () => {
-    setValue(Math.max(0, value-1))
+    setValue(Math.max(0, value - 1))
   }
 
   return (

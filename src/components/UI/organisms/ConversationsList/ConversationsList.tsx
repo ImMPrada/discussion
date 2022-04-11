@@ -1,28 +1,23 @@
 import { useContext } from 'react'
 import './styles.scss'
 import { Conversation } from '..'
-import { DataContext } from '../../../../contexts/DataContext'
+import { PostsContext } from '../../../../contexts/PostsContext'
+import { PostsContextTypes } from '../../../../contexts/PostsContext/types'
 import { Post } from '../../../../types'
 
 
 const ConversationsList = () => {
-  const { allPosts }: any = useContext(DataContext);
-  console.log('Renderizando wall...')
+  const { allPosts } = useContext(PostsContext) as PostsContextTypes;
+
   return(
     <div className="conversations-list">
       {
-        allPosts.map((post: Post) => {
-          console.log(post)
-          if(post.main) {
-            return (
-              <Conversation
-                key={post.postId}
-                main={post}
-                responses={post.responses}
-              />
-            )
-          }
-        })
+        allPosts.map((post: Post) => (
+            <Conversation
+              key={post.id}
+              post={post}
+            />
+        ))
       }
     </div>
   )

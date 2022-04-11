@@ -1,33 +1,39 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
-import { PostsContext } from "../../contexts/PostsContext";
-import { PostsContextTypes } from "../../contexts/PostsContext/types";
+import { AuthContextTypes } from '../../contexts/AuthContext/types';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 
-const usePost = () => {
-  const { createPost } = useContext(PostsContext) as PostsContextTypes;
+
+const useSignIn = () => {
+  const { login } = useContext(AuthContext) as AuthContextTypes;
+
   const validationSchema = yup.object().shape({
-    content: yup.string().required(),
-    receiverId: yup.number().nullable()
+    nickname: yup
+      .string()
+      .required(),
+    password: yup
+      .string()
+      .required(),
   });
   
   const formik = useFormik({
     initialValues: {
-      content: '',
-      receiverId: null
+      nickname: '',
+      password: '',
     },
     validateOnChange: false,
     validateOnBlur: true,
     validationSchema: validationSchema,
     onSubmit: () => {
-      createPost(formik.values)    
+      login(formik.values)
     },
   });
 
+
   return {
-    formik
+    formik,
   }
 }
 
-export default usePost
+export default useSignIn

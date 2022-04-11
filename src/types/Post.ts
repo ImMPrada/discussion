@@ -1,8 +1,15 @@
 export interface Post {
-  postId: number;
+  id: number;
   userId: number;
-  date: string;
+  createdAt: string;
   content: string;
-  main: boolean | null;
-  responses?: any;
+  receiverId: number | null;
+  reactionsScore: number;
+  thread: Post[];
+  user: PostUser;
+}
+
+export interface PostUser {
+  nickname: string;
+  avatar: string;  
 }

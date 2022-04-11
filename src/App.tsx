@@ -1,14 +1,14 @@
 import { AuthProvider } from './contexts/AuthContext'
-import { DataProvider } from './contexts/DataContext';
+import { PostsProvider } from './contexts/PostsContext';
 import AppRouter from './navigation/AppRouter/AppRouter';
 
 
 function App() {
   return (
     <AuthProvider>
-      <DataProvider>
+      <PostsProvider>
         <AppRouter/>
-      </DataProvider>
+      </PostsProvider>
     </AuthProvider>
     
   )

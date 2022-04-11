@@ -1,4 +1,7 @@
+import { PostUser } from '../../../../types'
 export interface MessageProps {
-  profileId: number;
+  user: PostUser;
+  userId: number;
   content: string;
+  createdAt: string;
 }

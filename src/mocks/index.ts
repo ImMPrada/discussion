@@ -1,4 +1,2 @@
-export * from './profileData';
 export * from './posts'
-export * from './profiles';
-export * from './currentUser'
+export * from './users';
