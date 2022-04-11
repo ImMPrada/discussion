@@ -12,9 +12,6 @@ import PublicRoutes from '../PublicRoutes';
 const { MAIN, POST } = ROUTES
 
 const AppRouter = () => {
-  console.log([ ...Object.values(POST) ])
-  console.log([ ...Object.values(MAIN) ])
-
   return (
     <Router>
       <Switch>

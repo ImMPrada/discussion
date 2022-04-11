@@ -28,8 +28,8 @@ export const posts: Post[] = [
     receiverId: null,
     reactionsScore: 5,
     user: {
-      nickname: 'immprada',
-      avatar: 'https://i.pinimg.com/originals/dc/13/a9/dc13a964c1f10cc677edb916f8faad2e.jpg',
+      nickname: 'yeiko',
+      avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6NDF03MXu7by8TXDXSsoKyrhizgAhacxJww&usqp=CAU',
     },
     thread:[
       {
@@ -40,8 +40,8 @@ export const posts: Post[] = [
         receiverId: 1,
         reactionsScore: 5,
         user: {
-          nickname: 'mapra99',
-          avatar: 'https://t1.pixers.pics/img-1fb6f67c/fotomurales-bichon-frise-perro.jpg?H4sIAAAAAAAAA3WOW27EIAxFtwNSMnYMDCQLmN9ZQkQJmdLmJaDtqKuvo6qflWXZvvL1MXxsxc8RQtxqzLCmaVoizGnhqQw5lvQdBTYWtRxYXQQiymH_jDnk_RBtZ6lpneMFzp7k8OXZufr8Ll5rPcoAUNTlSE8-xyUUCGsBws4CXsH0RnsVTbCecKz-iNW39GTD9mjwDPn3g0Zs9MmuOa2Cn9mZUsXb8ZDwD-m3B3bB7Q6KwBqwBKhPabzdFVljCfXopi44pxzNPU2eegwvMznnzZVQGR8vTPkB8g8OcSkBAAA=',
+          nickname: 'math',
+          avatar: 'https://i.pinimg.com/originals/10/2f/56/102f56a89c37c0c37c72e93d0c35a403.jpg',
         },
         thread:[],
       },

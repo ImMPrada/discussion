@@ -1,4 +1,3 @@
-import { AvatarGenerator } from "random-avatar-generator"
 import { User } from '../types'
 
 export const users: User[] = [

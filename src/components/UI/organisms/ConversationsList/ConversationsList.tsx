@@ -13,10 +13,10 @@ const ConversationsList = () => {
     <div className="conversations-list">
       {
         allPosts.map((post: Post) => (
-            <Conversation
-              key={post.id}
-              post={post}
-            />
+          <Conversation
+            key={post.id}
+            post={post}
+          />
         ))
       }
     </div>

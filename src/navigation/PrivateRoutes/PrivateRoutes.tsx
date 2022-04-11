@@ -1,21 +1,34 @@
-import React, { useContext, useEffect }  from 'react'
+import { useContext } from 'react'
 import {
-  Route
+  Route,
+  useHistory
 } from "react-router-dom";
-import { AuthProvider } from '../../contexts/AuthContext';
+import { AuthContext } from '../../contexts/AuthContext';
+import { AuthContextTypes } from '../../contexts/AuthContext/types';
 import { ROUTES } from '../routes'
 
 import { PostsSection } from '../../components/UI/pages';
 
 
-const { POST } = ROUTES
+const { POST, MAIN } = ROUTES
 
-const PrivateRoutes = () => (
-  <AuthProvider>
-    <Route exact path={ POST.MAIN }>
-      <PostsSection />
-    </Route>
-  </AuthProvider>
-)
+const PrivateRoutes = () => {
+  const { currentUser } = useContext(AuthContext) as AuthContextTypes;
+  const history = useHistory();
+  if (!currentUser) {
+    history.push(MAIN.SIGNIN)
+  }
+
+  return (
+    <>
+      <Route exact path={ POST.ROOT }>
+        <PostsSection />
+      </Route>
+      <Route exact path={ POST.MAIN }>
+        <PostsSection />
+      </Route>
+    </>
+  )
+}
 
 export default PrivateRoutes
