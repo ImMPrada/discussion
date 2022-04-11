@@ -1,5 +1,4 @@
-import { useContext, useEffect } from "react";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useContext } from "react";
 import { PostsContext } from "../../contexts/PostsContext";
 import { PostsContextTypes } from "../../contexts/PostsContext/types";
 import * as yup from 'yup';
