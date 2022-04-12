@@ -31,6 +31,7 @@ const Message = ({
         user={user}
         createdAt={createdAt}
         postId={postId}
+        isReceiver={receiver === null}
       />
       <MessageBody 
         receiver={receiver}

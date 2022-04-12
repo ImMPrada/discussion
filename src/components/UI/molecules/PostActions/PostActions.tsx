@@ -9,6 +9,7 @@ import './styles.scss'
 const PostActions = ({
   isYou,
   postId,
+  isReceiver,
 }:PostActionsProp) => {
   const { deletePost, responsePost } = useContext(PostsContext) as PostsContextTypes;
   const actionDelete = () => {
@@ -38,12 +39,14 @@ const PostActions = ({
               />
           </>
         ) : (
-          <ActionButton
-            icon={<BackArrowIcon/>}
-            text='Reply'
-            color='primary'
-            action={actionResponse}
-          />
+          isReceiver && (
+            <ActionButton
+              icon={<BackArrowIcon/>}
+              text='Reply'
+              color='primary'
+              action={actionResponse}
+            />
+          )
         )
       }
     </div>

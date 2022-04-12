@@ -51,7 +51,7 @@ export const PostsProvider = ({ children }: PostsProviderProps) => {
 
     allPostsTemporal[i].thread.push({
       id: 1,
-      createdAt: '',
+      createdAt: new Date().toISOString(),
       content: '',
       userId: 1,
       reactionsScore: 0,

@@ -9,6 +9,7 @@ const MessageHeader = ({
   user,
   createdAt,
   postId,
+  isReceiver,
 }: MessageHeaderProps) => {
 
   const formattedTimeAgo = formatDistance(new Date(createdAt), new Date(), { addSuffix: true})
@@ -26,6 +27,7 @@ const MessageHeader = ({
         <PostActions
           isYou={isYou}
           postId={postId}
+          isReceiver={isReceiver}
         />
       </div>
     </div>
