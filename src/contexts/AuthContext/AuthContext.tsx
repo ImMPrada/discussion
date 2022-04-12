@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom';
 import { 
   AuthContextTypes,
   AuthProviderProps,
@@ -21,13 +20,6 @@ export const AuthContext = createContext<AuthContextTypes | null>(null);
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [currentUser, setCurrentUser] = useState<User>(UNKNOWN_USER)
-  const history = useHistory(); 
-
-  useEffect(() => {
-    if(!history) return
-
-    history.push('/posts')
-  },[history, currentUser])
 
 
   const login = async ({ nickname, password }: LoginParams) => {
