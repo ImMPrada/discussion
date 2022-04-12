@@ -2,7 +2,7 @@
 
 This is a WIP. Share ideas with others and discuse it :) you can share ideas, rate it and if sometime you want, you can delete your posts.
 
-![image](https://user-images.githubusercontent.com/26731448/162986640-19dd4cb9-a2d1-4c09-99bf-3c351ac85e45.png)
+![image](https://user-images.githubusercontent.com/26731448/163056558-0ff6736f-50fc-4152-ad1d-9cbcabac19f4.png)
 
 This is the frontend of the web
 
