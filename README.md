@@ -1,10 +1,12 @@
 # discussion
 
-Share ideas with others and discuse it :) you can share ideas, rate it and if sometime you want, you can delete your posts.
+This is a WIP. Share ideas with others and discuse it :) you can share ideas, rate it and if sometime you want, you can delete your posts.
 
 ![image](https://user-images.githubusercontent.com/26731448/162986640-19dd4cb9-a2d1-4c09-99bf-3c351ac85e45.png)
 
 This is the frontend of the component
+
+Can find backend api repo here: https://github.com/ImMPrada/discussion-api
 
 
 ## Built With
@@ -40,7 +42,7 @@ yarn install
 yarn start
 ```
 
-To try it, we don't have jet an authentication system, but there are three fake users:
+To try it, we don't have yet an authentication system, but there are three fake users:
 
 ![image](https://user-images.githubusercontent.com/26731448/162988125-9b7893c7-0a59-498a-af72-b51a8e25a019.png)
 
