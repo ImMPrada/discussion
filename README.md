@@ -7,10 +7,10 @@ This is the frontend of the component
 
 ## Built With
 
-React
-TypeScript
-Sass
-Yarn for package management
+- React
+- TypeScript
+- Sass
+- Yarn for package management
 
 
 ## Getting Started
@@ -63,7 +63,7 @@ Give a ⭐️ if you like this project!
 
 Hat tip to frontendmentor.io for their design
 
-Special thanks for comments a mentoring to @mapra99
+Special thanks for comments and mentoring to @mapra99
 
 ## License
 
