@@ -11,7 +11,6 @@ import './styles.scss'
 
 const Message = ({
   user,
-  userId,
   content,
   createdAt,
   postId,
@@ -19,21 +18,20 @@ const Message = ({
 }: MessageProps) => {
   const { currentUser } = useContext(AuthContext) as AuthContextTypes;
   const { createPost, getPosts } = useContext(PostsContext) as PostsContextTypes;
-  if (!currentUser) return null;
 
   const fetchResponse = async (response: any) => {
     await createPost(response)
     await getPosts()
   }
-  console.log(currentUser.id, userId)
 
   return(
     <div className="message">
       <MessageHeader 
-        isYou={currentUser.id === userId}
+        isYou={currentUser.id === user.id}
         user={user}
         createdAt={createdAt}
         postId={postId}
+        isReceiver={receiver === null}
       />
       <MessageBody 
         receiver={receiver}

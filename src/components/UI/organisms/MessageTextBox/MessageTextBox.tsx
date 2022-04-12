@@ -26,7 +26,14 @@ const MessageTextBox = () => {
           > 
           </textarea>        
         </div>
-        <button type='submit'>SEND</button>
+        <div className="message-textbox-actions-area">
+          <button type='submit'>SEND</button>
+          {
+            currentUser.id === null && 
+            (<span>Have an account? <a href="/signin">Login</a></span>)
+          }
+        </div>
+
       </div>
     </form>
   )

@@ -5,4 +5,5 @@ export interface MessageHeaderProps {
   user: PostUser;
   createdAt: string;
   postId: number;
+  isReceiver: boolean;
 }

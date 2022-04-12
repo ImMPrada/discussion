@@ -2,8 +2,7 @@ import { ReactNode } from 'react';
 import { User } from '../../types';
 
 export interface AuthContextTypes {
-  currentUser: User | null;
-  getSessionStatus: () => void;
+  currentUser: User;
   login: (params: LoginParams) => void;
   logout: () => any;
 }

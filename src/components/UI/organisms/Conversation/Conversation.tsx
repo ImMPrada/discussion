@@ -6,7 +6,6 @@ const Conversation = ({
   post
 }: ConversationProps) => {
   const { thread } = post;
-  console.log(post)
 
   return (
     <div className="conversation">
