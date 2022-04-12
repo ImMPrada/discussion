@@ -4,7 +4,7 @@ This is a WIP. Share ideas with others and discuse it :) you can share ideas, ra
 
 ![image](https://user-images.githubusercontent.com/26731448/162986640-19dd4cb9-a2d1-4c09-99bf-3c351ac85e45.png)
 
-This is the frontend of the component
+This is the frontend of the web
 
 Can find backend api repo here: https://github.com/ImMPrada/discussion-api
 
@@ -60,7 +60,6 @@ This project is a frontend. Following the setup steps, you'll get the project ru
 
 
 ## Authors
-
 Miguel Prada
 
 GitHub: @ImMPrada
@@ -74,11 +73,9 @@ Show your support
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
 Hat tip to frontendmentor.io for their design
 
 Special thanks for comments and mentoring to @mapra99
 
 ## License
-
 This project is MIT licensed.
