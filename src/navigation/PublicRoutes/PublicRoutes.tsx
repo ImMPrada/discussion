@@ -7,10 +7,11 @@ import {
   SignIn,
   SignUp,
   SignOut,
+  PostsSection,
 } from "../../components/UI/pages";
 
 
-const { MAIN } = ROUTES
+const { MAIN, POST } = ROUTES
 
 const PublicRoutes  = () => (
   <>
@@ -22,6 +23,12 @@ const PublicRoutes  = () => (
     </Route>
     <Route exact path={ MAIN.SIGNOUT }>
       <SignOut />
+    </Route>
+    <Route exact path={ POST.ROOT }>
+      <PostsSection />
+    </Route>
+    <Route exact path={ POST.MAIN }>
+      <PostsSection />
     </Route>
   </>
 )

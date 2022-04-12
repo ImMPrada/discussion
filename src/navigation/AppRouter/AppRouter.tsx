@@ -6,19 +6,16 @@ import {
 } from "react-router-dom";
 
 import { ROUTES } from '../routes'
-import PrivateRoutes from '../PrivateRoutes';
 import PublicRoutes from '../PublicRoutes';
 
 const { MAIN, POST } = ROUTES
 
 const AppRouter = () => {
+
   return (
     <Router>
       <Switch>
-        <Route exact path={ [ ...Object.values(POST) ] }>
-          <PrivateRoutes />
-        </Route>
-        <Route exact path={ [ ...Object.values(MAIN) ] }>
+        <Route exact path={ [ ...Object.values(MAIN), ...Object.values(POST) ] }>
           <PublicRoutes />
         </Route>
       </Switch>

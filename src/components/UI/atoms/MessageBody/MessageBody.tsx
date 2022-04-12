@@ -9,7 +9,6 @@ const MessageBody = ({message, receiver, onClick}: MessageBodyProps) => {
   const parsedMessage = message.replaceAll(TAGS_REGEXP, "<a href='#'>$1</a>")
   const [textAreaContent, setTextAreaContent] = useState<string | null>(null)
   const [ display, setDisplay ] = useState<boolean>(message === '')
-  // if (message === '') setDisplay(true)
 
   return (
         display ? (

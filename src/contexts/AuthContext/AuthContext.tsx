@@ -1,4 +1,5 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom';
 import { 
   AuthContextTypes,
   AuthProviderProps,
@@ -7,15 +8,27 @@ import {
 import { User } from '../../types'
 import { get } from '../../utils/http'
 
+const UNKNOWN_USER_AVATAR = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/925px-Unknown_person.jpg'
+const UNKNOWN_USER_NICKNAME = 'JohnDoe'
+const UNKNOWN_USER = {
+  id: null,
+  nickname: UNKNOWN_USER_NICKNAME,
+  avatar: UNKNOWN_USER_AVATAR,
+}
+
 
 export const AuthContext = createContext<AuthContextTypes | null>(null);
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  const [currentUser, setCurrentUser] = useState<User | null>(null)
+  const [currentUser, setCurrentUser] = useState<User>(UNKNOWN_USER)
+  const history = useHistory(); 
 
-  const getSessionStatus = () => {
+  useEffect(() => {
+    if(!history) return
 
-  }
+    history.push('/posts')
+  },[history, currentUser])
+
 
   const login = async ({ nickname, password }: LoginParams) => {
 
@@ -27,13 +40,12 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   const logout = () => {
 
-    setCurrentUser(null)
+    setCurrentUser(UNKNOWN_USER)
     //redirect
   }
 
   const contextVal: AuthContextTypes = {
     currentUser,
-    getSessionStatus,
     login,
     logout,
   }

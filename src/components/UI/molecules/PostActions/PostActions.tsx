@@ -12,12 +12,10 @@ const PostActions = ({
 }:PostActionsProp) => {
   const { deletePost, responsePost } = useContext(PostsContext) as PostsContextTypes;
   const actionDelete = () => {
-    console.log(postId)
     deletePost(postId)
   }
 
   const actionResponse = () => {
-    console.log(postId)
     responsePost(postId)
   }
 

@@ -1,3 +1,4 @@
+import { formatDistance } from 'date-fns'
 import { ProfileBox, TimeLabel } from '../../atoms';
 import { PostActions } from '../'
 import './styles.scss'
@@ -10,7 +11,7 @@ const MessageHeader = ({
   postId,
 }: MessageHeaderProps) => {
 
-  const formattedTimeAgo = "2 months ago" // TODO: Use createdAt here
+  const formattedTimeAgo = formatDistance(new Date(createdAt), new Date(), { addSuffix: true})
 
   return(
     <div className="message-header">
