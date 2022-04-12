@@ -7,7 +7,7 @@ This is a WIP. Share ideas with others and discuse it :) you can share ideas, ra
 This is the frontend of the web
 
 Can find backend api repo here: https://github.com/ImMPrada/discussion-api
-
+Live demo of the web: https://discussion-flax.vercel.app/posts
 
 ## Built With
 
