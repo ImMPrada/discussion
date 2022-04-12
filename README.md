@@ -40,6 +40,16 @@ yarn install
 yarn start
 ```
 
+To try it, we don't have jet an authentication system, but there are three fake users:
+
+![image](https://user-images.githubusercontent.com/26731448/162988125-9b7893c7-0a59-498a-af72-b51a8e25a019.png)
+
+- mapra99
+- math
+- yeiko
+
+all of theme use Password1! as passworde ( better yet: as secret word xD )
+
 ## CORS Policy
 On development, the backend will only accept requests from another localhost port instance if sent from a browser, otherwise the request will fail due to the current CORS Policy
 
