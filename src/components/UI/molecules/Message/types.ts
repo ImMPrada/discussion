@@ -4,4 +4,6 @@ export interface MessageProps {
   userId: number;
   content: string;
   createdAt: string;
+  postId: number;
+  receiver: number | null;
 }

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 import { AuthContext } from "../../contexts/AuthContext";
 import { AuthContextTypes } from '../../contexts/AuthContext/types';
@@ -7,7 +7,7 @@ import { useFormik } from 'formik';
 
 
 const useSignIn = () => {
-  const { login } = useContext(AuthContext) as AuthContextTypes;
+  const { currentUser, login } = useContext(AuthContext) as AuthContextTypes;
   const history = useHistory();
 
   const validationSchema = yup.object().shape({
@@ -29,10 +29,14 @@ const useSignIn = () => {
     validationSchema: validationSchema,
     onSubmit: () => {
       login(formik.values)
-      history.push('/posts')
     },
   });
 
+  useEffect(() => {
+    if(!currentUser) return
+
+    history.push('/posts')
+  }, [currentUser])
 
   return {
     formik,

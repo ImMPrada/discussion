@@ -10,6 +10,7 @@ export interface Post {
 }
 
 export interface PostUser {
+  id: number;
   nickname: string;
   avatar: string;  
 }

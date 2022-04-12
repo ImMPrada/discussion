@@ -1,6 +1,8 @@
 import { HttpVerb, RequestParams } from './types'
+import { camelizeKeys, snakelizeKeys } from '../';
 
-const getCsrfToken = () => {
+
+export const getCsrfToken = () => {
   const metaElement = document.querySelector('meta[name="csrf-token"]')
 
   if (metaElement instanceof HTMLMetaElement) {
@@ -8,7 +10,7 @@ const getCsrfToken = () => {
   }
 }
 
-const buildRequest = (
+const buildRequest = async(
   url: string,
   method: HttpVerb,
   data: object = {}) => {
@@ -22,18 +24,18 @@ const buildRequest = (
   if (method !== 'GET') {
     request.headers['X-CSRF-Token'] = getCsrfToken();
 
-    request.body = JSON.stringify(data)
+    request.body = JSON.stringify(snakelizeKeys(data))
   }
 
-  return fetch(url, request)
+  const response = await fetch(url, request)
+  if (!response.ok) throw new Error(`Request to ${response.url} failed with status ${response.status} - ${response.statusText}`)
+
+  const jsonResult = await response.json();
+  return camelizeKeys(jsonResult);
 }
 
-const http: any = {
-  getCsrfToken: () => getCsrfToken(),
-  get: (url: string) => buildRequest(url, 'GET'),
-  post: (url: string, data: {}) => buildRequest(url, 'POST', data),
-  put: (url: string, data: {}) => buildRequest(url, 'PUT', data),
-  del: (url: string) => buildRequest(url, 'DELETE')
-}
+export const  get= (url: string) => buildRequest(url, 'GET')
+export const  post= (url: string, data: {}) => buildRequest(url, 'POST', data)
+export const  put= (url: string, data: {}) => buildRequest(url, 'PUT', data)
+export const  del= (url: string) => buildRequest(url, 'DELETE')
 
-export default http

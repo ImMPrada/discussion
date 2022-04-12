@@ -7,6 +7,7 @@ export interface PostsContextTypes {
   createPost: ( payload: PostPayload ) => void;
   updatePost: ( id: number, payload: Post ) => void;
   deletePost: ( id: number ) => void;
+  responsePost: ( id: number ) => void;
 }
 
 export interface PostsProviderProps {

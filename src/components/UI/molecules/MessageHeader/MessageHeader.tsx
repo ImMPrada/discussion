@@ -6,7 +6,8 @@ import { MessageHeaderProps } from './types';
 const MessageHeader = ({
   isYou,
   user,
-  createdAt
+  createdAt,
+  postId,
 }: MessageHeaderProps) => {
 
   const formattedTimeAgo = "2 months ago" // TODO: Use createdAt here
@@ -23,6 +24,7 @@ const MessageHeader = ({
       <div className="message-header-message-actions">
         <PostActions
           isYou={isYou}
+          postId={postId}
         />
       </div>
     </div>

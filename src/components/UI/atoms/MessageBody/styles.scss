@@ -14,4 +14,49 @@
       text-decoration: none;
     }
   }
+  &-response-area {
+    height: 100px;
+    display: flex;
+
+    textarea {
+      flex: 1 1;
+      resize: none;
+      border: 1px solid $moderate-blue;
+      border-radius: 8px;
+      margin-right: 16px;
+      outline: none;
+
+      font-family: $font-rubik;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: $grayish-blue;
+    }
+
+    button {
+      width: 20%;
+      border-radius: 8px;
+      outline: none;
+      align-self: start;
+      height: 48px;
+      background-color: $moderate-blue;
+      font-family: $font-rubik;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: white;
+      border: none;
+
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: $light-grayish-blue;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: $moderate-blue;
+      }
+    }
+  }
 }
