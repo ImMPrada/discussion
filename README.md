@@ -62,6 +62,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 Hat tip to frontendmentor.io for their design
+
 Special thanks for comments a mentoring to @mapra99
 
 ## License
