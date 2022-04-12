@@ -29,7 +29,7 @@ const MessageTextBox = () => {
         <div className="message-textbox-actions-area">
           <button type='submit'>SEND</button>
           {
-            currentUser.id === 1 && 
+            currentUser.id === null && 
             (<span>Have an account? <a href="/signin">Login</a></span>)
           }
         </div>
