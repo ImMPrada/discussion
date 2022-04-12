@@ -5,7 +5,7 @@ import {
   LoginParams,
 } from './types'
 import { User } from '../../types'
-import { users } from '../../mocks'
+import { get } from '../../utils/http'
 
 
 export const AuthContext = createContext<AuthContextTypes | null>(null);
@@ -17,12 +17,12 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   }
 
-  const login = ({ nickname, password }: LoginParams) => {
+  const login = async ({ nickname, password }: LoginParams) => {
 
-    const userTemporal = users.find(user => user.nickname === nickname && user.password === password)
-    if (!userTemporal) return
+    if( password !== 'Password1!') return 
+    const user = await get(`${process.env.REACT_APP_API_URL}/api/users/${nickname}`) as any;
 
-    setCurrentUser(userTemporal)
+    setCurrentUser(user)
   }
 
   const logout = () => {

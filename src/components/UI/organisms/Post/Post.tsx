@@ -6,18 +6,24 @@ import { PostProps } from './types'
 const Post = ({
   post,
 }: PostProps) => {
-  const { reactionsScore, user, userId, content, createdAt } = post
+  const { reactionsScore, user, content, createdAt, receiverId } = post
+  console.log(post)
   return(
     <div className="post">
       <div className="post-likes">
-        <LikesContainer reactionsScore={reactionsScore} />
+        <LikesContainer 
+          reactionsScore={reactionsScore} 
+          post={post}
+        />
       </div>
       <div className="post-message">
         <Message 
           user={user}
-          userId={userId}
+          postId={post.id}
+          userId={user.id}
           content={content}
           createdAt={createdAt}
+          receiver={receiverId}
         />
       </div>
     </div>

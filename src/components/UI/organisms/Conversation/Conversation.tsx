@@ -6,11 +6,12 @@ const Conversation = ({
   post
 }: ConversationProps) => {
   const { thread } = post;
+  console.log(post)
 
   return (
     <div className="conversation">
       <div className="conversation-initial-post">
-        <Post post={post} />
+        <Post post={post}/>
       </div>
         {
           thread.length > 0 && (

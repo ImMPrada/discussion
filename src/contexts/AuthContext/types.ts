@@ -5,7 +5,7 @@ export interface AuthContextTypes {
   currentUser: User | null;
   getSessionStatus: () => void;
   login: (params: LoginParams) => void;
-  logout: () => void;
+  logout: () => any;
 }
 
 export interface AuthProviderProps {

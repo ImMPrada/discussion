@@ -4,4 +4,5 @@ export interface ActionButtonProps extends ButtonHTMLAttributes<HTMLButtonElemen
   icon: ReactNode;
   text: string;
   color?: 'danger' | 'primary';
+  action: () => void;
 }

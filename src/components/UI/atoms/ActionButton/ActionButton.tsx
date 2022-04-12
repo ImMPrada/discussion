@@ -6,10 +6,12 @@ const ActionButton = ({
   icon,
   text,
   color,
+  action,
   ...props
 }: ActionButtonProps ) => (
   <button 
     className={`action-button ${color || 'primary'}`}
+    onClick={() => action()}
     {...props}
   >
     {icon}

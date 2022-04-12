@@ -1,10 +1,9 @@
 import { createContext, useState, useContext } from 'react'
 import { AuthContext } from '../AuthContext';
 import { AuthContextTypes } from '../AuthContext/types';
-import { posts } from '../../mocks';
 import { Post } from '../../types'
 import { PostsContextTypes, PostsProviderProps, PostPayload } from './types';
-
+import { get, post, del } from '../../utils/http'
 
 export const PostsContext = createContext<PostsContextTypes | null>(null);
 
@@ -13,29 +12,18 @@ export const PostsProvider = ({ children }: PostsProviderProps) => {
   const { currentUser } = useContext(AuthContext) as AuthContextTypes;
 
   // Get todos los posts
-  const getPosts = () => {
-
+  const getPosts = async () => {
+    
+    const posts = await get(`${process.env.REACT_APP_API_URL}/api/posts`) as Post[];
     setAllPosts(posts)
   }
 
   // Crear un post
-  const createPost = (payload: PostPayload) => {
+  const createPost = async (payload: PostPayload) => {
     if (!currentUser) return;
 
-
-    const result = {
-      id: allPosts.slice(-1)[0].id + 1,
-      userId: currentUser.id,
-      createdAt: new Date().toISOString(),
-      reactionsScore: 0,
-      thread: [],
-      user: {
-        nickname: currentUser.nickname,
-        avatar: currentUser.avatar
-      },
-      ...payload
-    }
-
+    const result = await post(`${process.env.REACT_APP_API_URL}/api/posts`, {...payload, userId: currentUser.id}) as Post;
+   
     setAllPosts([...allPosts, result])
   }
 
@@ -52,13 +40,35 @@ export const PostsProvider = ({ children }: PostsProviderProps) => {
   }
 
   // Delete un post
-  const deletePost = (id: number) => {
+  const deletePost = async (id: number) => {
+   
+    await del(`${process.env.REACT_APP_API_URL}/api/posts/${id}`);
+    const posts = await get(`${process.env.REACT_APP_API_URL}/api/posts`) as Post[];
 
-    const postIndex = allPosts.findIndex(post => post.id === id)
-    if (postIndex === -1) return
+    setAllPosts(posts)
+  }
+
+  const responsePost = async (id: number) => {
+    const i = allPosts.findIndex(post => post.id === id)
 
     const allPostsTemporal = [...allPosts]
-    allPostsTemporal.splice(postIndex, 1)
+
+    allPostsTemporal[i].thread.push({
+      id: 999999999999999999999999999,
+      createdAt: '',
+      content: '',
+      userId: 999999999999999999999999999,
+      reactionsScore: 0,
+      thread: [],
+      receiverId: id,
+      user: {
+        id: 999999999999999999999999999,
+        nickname: currentUser?.nickname || '',
+        avatar: currentUser?.avatar || '',
+      }
+    })
+
+    console.log(allPostsTemporal)
     setAllPosts(allPostsTemporal)
   }
 
@@ -68,6 +78,7 @@ export const PostsProvider = ({ children }: PostsProviderProps) => {
     createPost,
     updatePost,
     deletePost,
+    responsePost,
   }
 
   return (

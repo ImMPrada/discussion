@@ -4,10 +4,11 @@ import './styles.scss'
 
 import { LikesContainerProps } from './types';
 
-const LikesContainer = ({ reactionsScore }: LikesContainerProps) => {
+const LikesContainer = ({ reactionsScore, post }: LikesContainerProps) => {
   const [value, setValue] = useState(reactionsScore)
 
   const increaseValue = () => {
+    console.log(post)
     setValue(value + 1)
   }
   const decreaseValue = () => {
