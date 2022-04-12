@@ -28,7 +28,7 @@ git clone [....]
 cd discussion
 ```
 you'll need  .env file with this key pointing to your localhost:
-CATS_API_BASE_URL
+REACT_APP_API_URL
 
 ### install dependencies
 
@@ -50,7 +50,7 @@ To try it, we don't have yet an authentication system, but there are three fake 
 - math
 - yeiko
 
-all of theme use Password1! as passworde ( better yet: as secret word xD )
+all of theme use Password1! as password ( better yet: as secret word xD )
 
 ## CORS Policy
 On development, the backend will only accept requests from another localhost port instance if sent from a browser, otherwise the request will fail due to the current CORS Policy
