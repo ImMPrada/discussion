@@ -63,7 +63,7 @@ This project is a frontend. Following the setup steps, you'll get the project ru
 Miguel Prada
 
 GitHub: @ImMPrada
-LinkedIn: /in/ImMPrada/
+LinkedIn: /in/miguel-prada-15b7bb224/
 Contributing
 Contributions, issues, and feature requests are welcome!
 
