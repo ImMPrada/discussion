@@ -62,10 +62,10 @@ This project is a frontend. Following the setup steps, you'll get the project ru
 ## Authors
 Miguel Prada
 
-GitHub: @ImMPrada
-LinkedIn: /in/miguel-prada-15b7bb224/
-Contributing
-Contributions, issues, and feature requests are welcome!
+- GitHub: @ImMPrada
+- LinkedIn: /in/miguel-prada-15b7bb224/
+- Contributing
+- Contributions, issues, and feature requests are welcome!
 
 Feel free to check the issues page.
 
